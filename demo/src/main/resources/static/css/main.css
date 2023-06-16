@@ -1,0 +1,23 @@
+.navbar-nav{
+    gap:10px;
+}
+
+.data {
+    font-weight: bold;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 25px;
+}
+.box-item{
+    width: 300px;
+    min-width: 300px;
+    max-width:300px;
+}
+
+.header {
+    margin-top: 300px;
+}

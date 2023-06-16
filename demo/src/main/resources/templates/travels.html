@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikacja do planowania wyjazdów</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<span th:insert="~{menu :: menu}"></span>
+<h1 th:text="'Lista wszystkich podróży'" class="py-3 px-4"></h1>
+<div class="box">
+  <div th:each="travel : ${travels}" class="feature col bg-primary text-center border text-white gx-4 box-item">
+    <h3 class="fs-2 text-capitalize" th:text="${travel.name}"></h3>
+    <p><span th:text="'Od: '"></span><span class="data" th:text="${travel.departureDate}"></span></span></p>
+    <p><span th:text="'Do: '"></span><span class="data" th:text="${travel.returnDate}"></span></span></p>
+    <p><span th:text="'Środek transportu: '"></span><span class="data" th:text="${travel.travelTransport}"></span></span></p>
+    <p><span th:text="'Ocena wyjazdu: '"></span><span class="data" th:text="${travel.travelRate}"></span></span></p>
+  </div>
+</div>
+</body>
+</html>

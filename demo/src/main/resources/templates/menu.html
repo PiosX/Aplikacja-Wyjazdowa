@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<nav th:fragment="menu" class="navbar bg-primary">
+  <div class="container">
+    <ul class="navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link active" th:href="@{/}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/travels/}">Wyjazdy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/travels/add-travel}">Dodaj wyjazd</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</body>
+</html>
